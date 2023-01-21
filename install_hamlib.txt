@@ -1,0 +1,20 @@
+# jtdx_pi
+
+mkdir code
+cd code
+
+#https://github.com/Hamlib/Hamlib
+
+sudo apt-get -y install dh-autoreconf
+git clone https://github.com/Hamlib/Hamlib.git
+cd Hamlib
+
+./bootstrap
+
+./configure
+
+make
+
+sudo make install
+
+cd ..
