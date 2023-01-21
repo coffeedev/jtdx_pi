@@ -1,0 +1,25 @@
+mkdir code
+cd code
+
+git clone https://www.github.com/jtdx-project/jtdx
+cd jtdx
+
+sudo apt-get -y install gfortran
+sudo apt-get -y install boost
+sudo apt-get -y install build-essential libboost-system-dev libboost-thread-dev libboost-program-options-dev libboost-test-dev
+sudo apt-get -y install libfftw3-3
+sudo apt-get -y install libfftw3-dev
+sudo apt-get -y install libusb-1.0-0-dev
+sudo apt-get -y install libhamlib-utils
+sudo apt-get -y install qtbase5-dev qtdeclarative5-dev
+sudo apt-get -y install libqt5serialport5
+sudo apt-get -y install libqt5serialport5-dev
+sudo apt-get -y install libqt5multimedia5-plugins qml-module-qtmultimedia
+sudo apt-get -y install qtmultimedia5-dev
+sudo apt-get -y install qttools5-dev
+sudo apt-get -y install qml-module-qtwebsockets
+sudo apt-get -y install libqt5websockets5-dev
+
+cmake -DWSJT_SKIP_MANPAGES=ON -DWSJT_GENERATE_DOCS=OFF --prefix=/usr .
+sudo apt-get install libudev-dev
+sudo make install
