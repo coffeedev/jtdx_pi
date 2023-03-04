@@ -1,0 +1,12 @@
+mkdir -p ~/software
+cd ~/software
+sudo apt-get install fldigi
+wget http://www.w1hkj.com/files/flrig/flrig-1.4.7.tar.gz
+cd flrig-1.4.7/
+tar xvf flrig-1.4.7.tar.gz
+cd flrig-1.4.7/
+sudo apt install libfltk1.3-dev -y
+./configure
+make clean
+make
+sudo make install
